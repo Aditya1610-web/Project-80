@@ -1,0 +1,172 @@
+<html>
+
+<head>
+    <title>Photo gallery</title>
+    <link rel="stylesheet" href="style.css">
+  
+</head>
+
+<body>
+    <center>
+        <h1>Photo gallery</h1>
+        <div>
+            <h1>-----------</h1>
+        </div>
+        <img id="Avenlogo" src="avengers%20logo.jpg">
+    </center>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <section id="Gridgallery">
+        <div>
+            <span><img src="Blk%20panther.jfif"></span>
+            <span><img src="Blk%20widow.jfif"></span>
+            <span><img src="Gamora.jfif"></span>
+            <span><img src="Capm.jfif"></span>
+            <span><img src="Dr.starnge.jfif"></span>
+            <span><img src="Ironman.jfif"></span>
+        </div>
+        <div>
+            <span><img src="Spiderman.jfif"></span>
+            <span><img src="Cap.jfif"></span>
+            <span><img src="Ant%20man%20and%20the%20Wasp.jfif"></span>
+            <span><img src="Dum%20lord.jfif"></span>
+            <span><img src="Hulk.jfif"></span>
+            <span><img src="Thanos.jfif"></span>
+        </div>
+    </section>
+    <br>
+    <br>
+    <br>
+    <section id="SlideImage">
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 13</div>
+                <img src="Thor.jpeg" style="width:100%">
+
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 13</div>
+                <img src="hulk1.jpg" style="width:100%">
+            </div>
+
+
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 13</div>
+                <img src="captainmarvel1.jpeg" style="width:100%">
+
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">4 / 13</div>
+                <img src="captainamerica1.jpg" style="width:100%">
+
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">5 / 3</div>
+                <img src="Thonas.jpg" style="width:100%">
+
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">6 / 13</div>
+                <img src="black-widow-wakanda-suit-1197347-1280x0.jpeg" style="width:100%">
+
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">7 / 3</div>
+                <img src="blackpanther1.jpg" style="width:100%">
+
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">8 / 13</div>
+                <img src="spiderman.jpg" style="width:100%">
+
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">9 / 13</div>
+                <img src="Drstrange.jpg" style="width:100%">
+
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">10 / 13</div>
+                <img src="Groot.jpg" style="width:100%">
+
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">11 / 13</div>
+                <img src="guardians-of-the-galaxy-gamora-1200x675.jpg" style="width:100%">
+
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">12 / 13</div>
+                <img src="war-machine-avengers-endgame-1157942-1158958-1280x0.jpeg" style="width:100%">
+
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">13 / 13</div>
+                <img src="Rockeracon.jpg" style="width:100%">
+
+            </div>
+            <br>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        </div>
+        <br>
+         
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(6)"></span>
+            <span class="dot" onclick="currentSlide(7)"></span>
+            <span class="dot" onclick="currentSlide(8)"></span>
+            <span class="dot" onclick="currentSlide(9)"></span>
+            <span class="dot" onclick="currentSlide(10)"></span>
+            <span class="dot" onclick="currentSlide(11)"></span>
+            <span class="dot" onclick="currentSlide(12)"></span>
+            <span class="dot" onclick="currentSlide(13)"></span>
+        </div>
+    </section>
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = slides.length
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+
+    </script>
+
+</body>
+
+</html>
